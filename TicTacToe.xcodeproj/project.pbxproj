@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		B7BB47791B714F0700D2E331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB47781B714F0700D2E331 /* main.m */; };
 		B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB477B1B714F0700D2E331 /* AppDelegate.m */; };
-		B7BB477F1B714F0700D2E331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB477E1B714F0700D2E331 /* ViewController.m */; };
 		B7BB47821B714F0700D2E331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BB47801B714F0700D2E331 /* Main.storyboard */; };
 		B7BB47841B714F0700D2E331 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BB47831B714F0700D2E331 /* Images.xcassets */; };
 		B7BB47871B714F0700D2E331 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BB47851B714F0700D2E331 /* LaunchScreen.xib */; };
 		B7BB47931B714F0800D2E331 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB47921B714F0800D2E331 /* TicTacToeTests.m */; };
+		B7BB47A41B71541600D2E331 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB47A31B71541600D2E331 /* GameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		B7BB47781B714F0700D2E331 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7BB477A1B714F0700D2E331 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7BB477B1B714F0700D2E331 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B7BB477D1B714F0700D2E331 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B7BB477E1B714F0700D2E331 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B7BB47811B714F0700D2E331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7BB47831B714F0700D2E331 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B7BB47861B714F0700D2E331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B7BB478C1B714F0700D2E331 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BB47911B714F0800D2E331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7BB47921B714F0800D2E331 /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		B7BB47A21B71541600D2E331 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		B7BB47A31B71541600D2E331 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,8 @@
 			children = (
 				B7BB477A1B714F0700D2E331 /* AppDelegate.h */,
 				B7BB477B1B714F0700D2E331 /* AppDelegate.m */,
-				B7BB477D1B714F0700D2E331 /* ViewController.h */,
-				B7BB477E1B714F0700D2E331 /* ViewController.m */,
 				B7BB47801B714F0700D2E331 /* Main.storyboard */,
+				B7BB47A11B71541600D2E331 /* ViewControllers */,
 				B7BB47831B714F0700D2E331 /* Images.xcassets */,
 				B7BB47851B714F0700D2E331 /* LaunchScreen.xib */,
 				B7BB47761B714F0700D2E331 /* Supporting Files */,
@@ -117,6 +116,15 @@
 				B7BB47911B714F0800D2E331 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7BB47A11B71541600D2E331 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB47A21B71541600D2E331 /* GameViewController.h */,
+				B7BB47A31B71541600D2E331 /* GameViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BB477F1B714F0700D2E331 /* ViewController.m in Sources */,
+				B7BB47A41B71541600D2E331 /* GameViewController.m in Sources */,
 				B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */,
 				B7BB47791B714F0700D2E331 /* main.m in Sources */,
 			);
