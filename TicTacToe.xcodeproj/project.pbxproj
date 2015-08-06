@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B78133161B7269AA0060F6D1 /* TicTacToe.m in Sources */ = {isa = PBXBuildFile; fileRef = B78133151B7269AA0060F6D1 /* TicTacToe.m */; };
+		B781331D1B733F8B0060F6D1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = B781331C1B733F8B0060F6D1 /* Game.m */; };
 		B7BB47791B714F0700D2E331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB47781B714F0700D2E331 /* main.m */; };
 		B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB477B1B714F0700D2E331 /* AppDelegate.m */; };
 		B7BB47821B714F0700D2E331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BB47801B714F0700D2E331 /* Main.storyboard */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B78133141B7269AA0060F6D1 /* TicTacToe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
+		B78133151B7269AA0060F6D1 /* TicTacToe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
+		B781331B1B733F8B0060F6D1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B781331C1B733F8B0060F6D1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		B7BB47731B714F0700D2E331 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BB47771B714F0700D2E331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7BB47781B714F0700D2E331 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B78133131B7269AA0060F6D1 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				B78133141B7269AA0060F6D1 /* TicTacToe.h */,
+				B78133151B7269AA0060F6D1 /* TicTacToe.m */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		B781331A1B733F8B0060F6D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B781331B1B733F8B0060F6D1 /* Game.h */,
+				B781331C1B733F8B0060F6D1 /* Game.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B7BB476A1B714F0700D2E331 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +108,8 @@
 				B7BB477A1B714F0700D2E331 /* AppDelegate.h */,
 				B7BB477B1B714F0700D2E331 /* AppDelegate.m */,
 				B7BB47801B714F0700D2E331 /* Main.storyboard */,
+				B781331A1B733F8B0060F6D1 /* Model */,
+				B78133131B7269AA0060F6D1 /* TicTacToe */,
 				B7BB47A11B71541600D2E331 /* ViewControllers */,
 				B7BB47831B714F0700D2E331 /* Images.xcassets */,
 				B7BB47851B714F0700D2E331 /* LaunchScreen.xib */,
@@ -227,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B781331D1B733F8B0060F6D1 /* Game.m in Sources */,
 				B7BB47A41B71541600D2E331 /* GameViewController.m in Sources */,
 				B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */,
+				B78133161B7269AA0060F6D1 /* TicTacToe.m in Sources */,
 				B7BB47791B714F0700D2E331 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -366,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -424,6 +454,7 @@
 				B7BB47981B714F0800D2E331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7BB47991B714F0800D2E331 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +463,7 @@
 				B7BB479B1B714F0800D2E331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
