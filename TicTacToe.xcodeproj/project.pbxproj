@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B78133161B7269AA0060F6D1 /* TicTacToe.m in Sources */ = {isa = PBXBuildFile; fileRef = B78133151B7269AA0060F6D1 /* TicTacToe.m */; };
 		B781331D1B733F8B0060F6D1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = B781331C1B733F8B0060F6D1 /* Game.m */; };
+		B78133201B73B3690060F6D1 /* AI.m in Sources */ = {isa = PBXBuildFile; fileRef = B781331F1B73B3690060F6D1 /* AI.m */; };
+		B78133231B73B38D0060F6D1 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = B78133221B73B38D0060F6D1 /* Board.m */; };
+		B78133291B755E840060F6D1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78133281B755E840060F6D1 /* MenuViewController.m */; };
 		B7BB47791B714F0700D2E331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB47781B714F0700D2E331 /* main.m */; };
 		B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BB477B1B714F0700D2E331 /* AppDelegate.m */; };
 		B7BB47821B714F0700D2E331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BB47801B714F0700D2E331 /* Main.storyboard */; };
@@ -29,10 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B78133141B7269AA0060F6D1 /* TicTacToe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
-		B78133151B7269AA0060F6D1 /* TicTacToe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
 		B781331B1B733F8B0060F6D1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		B781331C1B733F8B0060F6D1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		B781331E1B73B3690060F6D1 /* AI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AI.h; path = TicTacToe/Model/AI.h; sourceTree = SOURCE_ROOT; };
+		B781331F1B73B3690060F6D1 /* AI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AI.m; path = TicTacToe/Model/AI.m; sourceTree = SOURCE_ROOT; };
+		B78133211B73B38D0060F6D1 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		B78133221B73B38D0060F6D1 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		B78133271B755E840060F6D1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B78133281B755E840060F6D1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		B7BB47731B714F0700D2E331 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BB47771B714F0700D2E331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7BB47781B714F0700D2E331 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,20 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B78133131B7269AA0060F6D1 /* TicTacToe */ = {
-			isa = PBXGroup;
-			children = (
-				B78133141B7269AA0060F6D1 /* TicTacToe.h */,
-				B78133151B7269AA0060F6D1 /* TicTacToe.m */,
-			);
-			path = TicTacToe;
-			sourceTree = "<group>";
-		};
 		B781331A1B733F8B0060F6D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B78133211B73B38D0060F6D1 /* Board.h */,
+				B78133221B73B38D0060F6D1 /* Board.m */,
 				B781331B1B733F8B0060F6D1 /* Game.h */,
 				B781331C1B733F8B0060F6D1 /* Game.m */,
+				B781331E1B73B3690060F6D1 /* AI.h */,
+				B781331F1B73B3690060F6D1 /* AI.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,7 +110,6 @@
 				B7BB477B1B714F0700D2E331 /* AppDelegate.m */,
 				B7BB47801B714F0700D2E331 /* Main.storyboard */,
 				B781331A1B733F8B0060F6D1 /* Model */,
-				B78133131B7269AA0060F6D1 /* TicTacToe */,
 				B7BB47A11B71541600D2E331 /* ViewControllers */,
 				B7BB47831B714F0700D2E331 /* Images.xcassets */,
 				B7BB47851B714F0700D2E331 /* LaunchScreen.xib */,
@@ -149,6 +149,8 @@
 			children = (
 				B7BB47A21B71541600D2E331 /* GameViewController.h */,
 				B7BB47A31B71541600D2E331 /* GameViewController.m */,
+				B78133271B755E840060F6D1 /* MenuViewController.h */,
+				B78133281B755E840060F6D1 /* MenuViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,10 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78133231B73B38D0060F6D1 /* Board.m in Sources */,
 				B781331D1B733F8B0060F6D1 /* Game.m in Sources */,
+				B78133201B73B3690060F6D1 /* AI.m in Sources */,
 				B7BB47A41B71541600D2E331 /* GameViewController.m in Sources */,
+				B78133291B755E840060F6D1 /* MenuViewController.m in Sources */,
 				B7BB477C1B714F0700D2E331 /* AppDelegate.m in Sources */,
-				B78133161B7269AA0060F6D1 /* TicTacToe.m in Sources */,
 				B7BB47791B714F0700D2E331 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

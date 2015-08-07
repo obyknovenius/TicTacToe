@@ -10,4 +10,7 @@
 
 @interface GameViewController : UIViewController
 
+@property (nonatomic, getter=isComputerPlay) BOOL computerPlay;
+@property (nonatomic, getter=isComputerFirst) BOOL computerFirst;
+
 @end

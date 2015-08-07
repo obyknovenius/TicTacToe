@@ -9,25 +9,26 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
+    GameResultNone,
     GameResultPlayer1Win,
     GameResultPlayer2Win,
     GameResultTie,
 } GameResult;
 
-@protocol GameResult;
+@class Board;
 
 @interface Game : NSObject
 
-- (instancetype)init;
+@property (nonatomic, readonly) Board *board;
+
+@property (nonatomic, readonly) char player1Character;
+@property (nonatomic, readonly) char player2Character;
+
+- (instancetype)initWithBoardSideLength:(int)sideLength;
+
 - (void)restartGame;
 - (char)makeMoveToIndex:(int)index;
 
-@property (nonatomic, weak) id<GameResult> delegate;
-
-@end
-
-@protocol GameResult <NSObject>
-
-- (void)game:(Game *)game DidFinishWithResult:(GameResult)result;
+- (GameResult)gameResult;
 
 @end

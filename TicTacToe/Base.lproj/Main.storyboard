@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MpZ-6d-jMv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wow-KF-973">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tic Tac Toe-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -19,25 +19,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-Aq-vRN">
-                                <rect key="frame" x="239" y="285" width="123" height="30"/>
+                                <rect key="frame" x="229" y="285" width="142" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Human vs AI">
+                                <state key="normal" title="Human vs Computer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MpZ-6d-jMv" kind="show" identifier="HvsC" id="llD-dI-esD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB7-0g-fzV">
-                                <rect key="frame" x="239" y="235" width="123" height="30"/>
+                                <rect key="frame" x="229" y="235" width="142" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Human vs Human">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MpZ-6d-jMv" kind="show" identifier="HvsH" id="LON-cM-JdA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2V-IX-KKO">
-                                <rect key="frame" x="239" y="335" width="123" height="30"/>
+                                <rect key="frame" x="229" y="335" width="142" height="30"/>
                                 <animations/>
-                                <state key="normal" title="AI vs Human">
+                                <state key="normal" title="Computer vs Human">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MpZ-6d-jMv" kind="show" identifier="CvsH" id="T5o-wg-ZIq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -53,12 +62,15 @@
                             <constraint firstAttribute="centerX" secondItem="HoO-Aq-vRN" secondAttribute="centerX" id="vaa-ii-Pvb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tic Tac Toe" id="fEi-d0-lyZ">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="VSh-6X-ZZA"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="337"/>
+            <point key="canvasLocation" x="1060" y="337"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Tic Tac Toe-->
         <scene sceneID="Sgx-fC-uD8">
             <objects>
                 <viewController id="MpZ-6d-jMv" customClass="GameViewController" sceneMemberID="viewController">
@@ -67,11 +79,11 @@
                         <viewControllerLayoutGuide type="bottom" id="x9a-A5-hzm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jVd-5S-Lw0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xf-N0-49Y">
-                                <rect key="frame" x="207" y="206" width="186" height="187"/>
+                                <rect key="frame" x="207" y="207" width="186" height="186"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="👿">
@@ -82,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-Pn-REv">
-                                <rect key="frame" x="397" y="206" width="187" height="187"/>
+                                <rect key="frame" x="397" y="207" width="187" height="186"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hjy-Pn-REv" secondAttribute="height" multiplier="1:1" id="b5j-O4-eF6"/>
@@ -96,7 +108,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fZ-pa-L0A">
-                                <rect key="frame" x="16" y="206" width="187" height="187"/>
+                                <rect key="frame" x="16" y="207" width="187" height="186"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5fZ-pa-L0A" secondAttribute="height" multiplier="1:1" id="a0x-64-Hl9"/>
@@ -110,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-Os-9ne">
-                                <rect key="frame" x="207" y="16" width="186" height="186"/>
+                                <rect key="frame" x="207" y="16" width="186" height="187"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9GH-Os-9ne" secondAttribute="height" multiplier="1:1" id="PVh-JG-ONJ"/>
@@ -124,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-zm-Zrz">
-                                <rect key="frame" x="397" y="16" width="187" height="186"/>
+                                <rect key="frame" x="397" y="16" width="187" height="187"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8lc-zm-Zrz" secondAttribute="height" multiplier="1:1" id="Bvb-NA-6WO"/>
@@ -138,7 +150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-6h-HEA">
-                                <rect key="frame" x="20" y="16" width="187" height="186"/>
+                                <rect key="frame" x="20" y="16" width="187" height="187"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SoI-6h-HEA" secondAttribute="height" multiplier="1:1" id="c73-4r-C8t"/>
@@ -202,7 +214,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uO-13-Ndx">
-                                <rect key="frame" x="17" y="202" width="567" height="4"/>
+                                <rect key="frame" x="17" y="203" width="567" height="4"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -285,6 +297,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Tic Tac Toe" id="VIC-fF-J6D"/>
                     <connections>
                         <outletCollection property="buttons" destination="SoI-6h-HEA" id="l4r-d8-IgW"/>
                         <outletCollection property="buttons" destination="9GH-Os-9ne" id="Rml-Ae-PVv"/>
@@ -299,7 +312,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKZ-tx-mHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="337"/>
+            <point key="canvasLocation" x="1737" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZTv-Lt-bp0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wow-KF-973" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8h5-Nt-bUB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="HCY-D4-7Tk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOk-Pl-SZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="337"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="llD-dI-esD"/>
+    </inferredMetricsTieBreakers>
 </document>
