@@ -68,21 +68,37 @@
         [moves addObject:@(emptyIndex)];
     }
     
-    int maxIndex = 0, maxScore = INT_MIN;
+    int maxIndex = 0, minIndex = 0;
+    int maxScore = INT_MIN, minScore = INT_MAX;
     
-    for (int i = 0; i < [scores count]; i++) {
-        int score = [[scores objectAtIndex:i] intValue];
-        if (score > maxScore) {
-            maxIndex = i;
-            maxScore = score;
+    if (character == self.aiCharacter) {
+        for (int i = 0; i < [scores count]; i++) {
+            int score = [[scores objectAtIndex:i] intValue];
+            if (score > maxScore) {
+                maxIndex = i;
+                maxScore = score;
+            }
         }
+        
+        int bestMove = [[moves objectAtIndex:maxIndex] intValue];
+        int bestScore = [[scores objectAtIndex:maxIndex] intValue];
+        self.bestMove = bestMove;
+        
+        return bestScore;
+    } else {
+        for (int i = 0; i < [scores count]; i++) {
+            int score = [[scores objectAtIndex:i] intValue];
+            if (score < minScore) {
+                minIndex = i;
+                minScore = score;
+            }
+        }
+        
+        int bestScore = [[scores objectAtIndex:minIndex] intValue];
+        return bestScore;
     }
     
-    int bestMove = [[moves objectAtIndex:maxIndex] intValue];
-    int bestScore = [[scores objectAtIndex:maxIndex] intValue];
-    self.bestMove = bestMove;
-    
-    return bestScore;
+    return 0;
 }
 
 - (int)getScoreForBoard:(Board *)board withDepth:(int)depth {
